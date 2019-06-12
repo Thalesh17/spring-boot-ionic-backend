@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.thales.cursomc.domain.Categoria;
 import com.thales.cursomc.services.CategoriaService;
+import com.thales.cursomc.services.exceptions.ObjectNotFoundException;
 
 @RestController
 @RequestMapping(value = "/categorias")
