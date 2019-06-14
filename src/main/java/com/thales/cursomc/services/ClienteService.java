@@ -15,7 +15,6 @@ import com.thales.cursomc.domain.Endereco;
 import com.thales.cursomc.domain.enums.TipoCliente;
 import com.thales.cursomc.dto.ClienteDTO;
 import com.thales.cursomc.dto.ClienteNewDTO;
-import com.thales.cursomc.repositories.CidadeRepository;
 import com.thales.cursomc.repositories.ClienteRepository;
 import com.thales.cursomc.repositories.EnderecoRepository;
 import com.thales.cursomc.services.exceptions.DataIntegrityException;
@@ -60,7 +59,7 @@ public class ClienteService {
 			repo.delete(id);	
 		}
 		catch(DataIntegrityViolationException e) {
-			throw new DataIntegrityException("Não é possível excluir porque há entidades relacionadas.");
+			throw new DataIntegrityException("Não é possível excluir porque há pedidos relacionados.");
 		}
 		
 	}
